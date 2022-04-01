@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     mongodburl: process.env.MONGODB_URI,
     jwtsecret: process.env.JWTSECRET,
-    public_url: 'http://localhost:3000'
+    public_url: process.env.PUBLIC_URL
 }
 }
 
