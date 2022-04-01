@@ -6,7 +6,7 @@ import cookie from "cookie";
 import { v4 as uuidv4 } from "uuid";
 
 async function signup(req, res) {
-  if (req.metnhod !== "POST") {
+  if (req.method !== "POST") {
     return res.status(422).json({ message: "req_method_not_supported" });
   }
 
