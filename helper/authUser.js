@@ -3,6 +3,8 @@ import { parse } from "cookie";
 
 const authenticate = (fn) => async (req, res) => {
   const cookie = parse(req.headers.cookie).auth;
+  console.log(req.headers)
+  console.log(req.body)
   jwt.verify(
     cookie,
     process.env.jwtsecret,
