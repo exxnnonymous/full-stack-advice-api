@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     position: "relative",
-    paddingTop: 150,
+    paddingTop: 130,
     paddingBottom: 120,
 
     [BREAKPOINT]: {
@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 62,
+    fontSize: 70,
     fontWeight: 900,
     lineHeight: 1.1,
     margin: 0,
@@ -99,8 +99,16 @@ export default function HeroTitle() {
 
   return (
     <div className={classes.wrapper}>
-      <Container size={700} className={classes.inner}>
+      <Container size={800} className={classes.inner}>
         <h1 className={classes.title}>
+          Advice <Text
+            component="span"
+            variant="gradient"
+            gradient={{ from: "indigo", to: "blue" }}
+            inherit
+          >
+            API
+          </Text><br />
           Get{" "}
           <Text
             component="span"
@@ -108,14 +116,13 @@ export default function HeroTitle() {
             gradient={{ from: "indigo", to: "blue" }}
             inherit
           >
-            real-time
-          </Text>{" "}
-          Advice api for free
+            advice
+          </Text> for free
         </h1>
 
         <Text className={classes.description} color="dimmed">
-          Build different applications with ease using our api - Advice provides
-          many advices on different topics and category for free
+          Build different applications with ease using our API - Advice API provides
+          many advices on different topics and category for free and properly visualize API usage in our dashboard
         </Text>
 
         <Group className={classes.controls}>
