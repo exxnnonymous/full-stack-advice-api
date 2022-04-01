@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Advice API Website!
 
-## Getting Started
+Advice API is a full stack fully responsive website made with Next Js for both front-end and  for back-end. 
 
-First, run the development server:
+## Table of contents
+- [Overview](#overview)
+	 - [Screenshot](#screenshot)
+	- [Run Project](#run)
+	 - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Overview
+Front-end part includes home page, features page, API docs page with instructions to use the API. It also includes user dashboard, modal for login and signup. I have also implemented dark and light theme.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The website also support server side rendering. Main aim of building this page was user authentication and data management. So, in the back-end the website will be fetching the data from [Advice JSON API](https://api.adviceslip.com/) , record the API calls and provide the fetched data to the user. 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+User should create account and will get the apikey which they can use to fetch the data from our API. User will get 15 credits daily and they can fetch data from our API. Users won't be able to request once the credits is finished. Once logged in, users can see their stats of API usage in their dashboard. They can properly see stats in the form of chart. They can also change their password (once a week) and email  (once a month).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Screenshot
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![](./screenshot.png)
 
-## Learn More
+### Run
+Clone the project
 
-To learn more about Next.js, take a look at the following resources:
+    git clone https://github.com/exxnnonymous/full-stack-advice-api.git
+Build the app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    npm run build
+Start the app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    npm start
 
-## Deploy on Vercel
+### Links
+- Live Site URL: ()
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## My process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built with
+- CSS modules and [createStyles](https://mantine.dev/theming/create-styles/) (css-in-js library) - For styling
+- [tabler-icons-react](https://tabler-icons-react.vercel.app/) - For icons
+- Context API and useReducer Hook - To manage state
+- [Next Js](https://nextjs.org/) - React Framework
+- [Mantine](https://mantine.dev/) - React Component Library
+- [Chart Js](https://www.chartjs.org/) - For Line Chart
+- MongoDB and Mongoose for Database
+- [Advice JSON API](https://api.adviceslip.com/) - To fetch advice slips
+- Axios to fetch data, bcrypt for hashing user password and implemented jsonwebtoken and cookie for secure user authentication.
+
+### What I learned
+
+I learned a lot while building this website. I learned a react component library ([mantine](https://mantine.dev/)), because of which i could easily build responsive website and focus more in back-end. I learned more about user authentication and to make website secure implementing jsonwebtoken and cookie. I learned to manage the state using Context API and useReducer Hooks. I also learned a lot on CRUD.
+
+## Author
+
+- Twitter - [@exxnnonymous](https://www.twitter.com/exxnnonymous)

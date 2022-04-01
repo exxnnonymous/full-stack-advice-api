@@ -1,0 +1,81 @@
+
+
+.dashboard_container{
+    
+    width: 100%;
+}
+
+.dash_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard_content{
+    margin-top: 1rem;
+    padding-block: 1rem 2rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+
+
+.dashboard_content > .chart{
+    flex: 99%;
+    max-width: 99%;
+}
+.dashboard_content > .aside{
+    flex: 100%;
+    max-width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.aside > .blog{
+    max-width: 280px;
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    
+    
+}
+@media screen and (min-width:1024px) {
+    .aside > .blog{
+       display: block;
+    }
+    .dashboard_content > .chart{
+        flex: 98%;
+        max-width: 98%;
+    }
+    
+}
+
+
+
+@media screen and (min-width:1300px) {
+    .dashboard_content{
+        flex-wrap: nowrap;
+    }
+    .dashboard_content > .chart{
+       flex: 60%;
+    max-width: 60%;
+    }
+    .dashboard_content > .aside{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: start;
+          flex: 40%;
+    max-width: 40%;
+    }
+}

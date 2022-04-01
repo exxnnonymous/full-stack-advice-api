@@ -1,0 +1,108 @@
+
+
+.dashboard_page_container{
+    width: 100%;
+    padding:0rem 2rem 1rem;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.account_info{
+    display: grid;
+    padding: 2rem;
+    row-gap: 1.5rem;
+}
+
+
+.account_info_item{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+}
+.account_info_item:nth-of-type(2){
+    gap: 7.5rem;
+}
+.account_info_item:nth-of-type(3){
+    gap: 7.8rem;
+}
+.account_info_item:nth-of-type(4){
+    gap: 7rem;
+}
+
+.apikey > span{
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+
+.setting_email,
+.setting_password
+{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+@media screen and (max-width:378px) {
+    .account_info{
+        padding: .5rem;
+    }
+}
+@media screen and (max-width:560px) {
+    
+.setting_email,
+.setting_password
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .7rem;
+    align-items: flex-start;
+}
+
+}
+@media screen and (max-width:480px) {
+    .apikey > span{
+        margin-right: 0rem;
+        display: block;
+        margin-bottom: .7rem;
+        word-break:break-all ;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .title{
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .dashboard_page_container{
+        padding:0rem 0rem 2rem;
+    }
+    .account_info{
+        padding: 1rem;
+    }
+    .account_info_item{
+        flex-direction: column;
+        gap: 0rem;
+        align-items: flex-start;
+    }
+    .account_info_item:nth-of-type(2){
+        gap:   0rem;
+    }
+    .account_info_item:nth-of-type(3){
+        gap:   0rem;
+    }
+    .account_info_item:nth-of-type(4){
+        gap:  0rem;
+    }
+    
+    
+}
