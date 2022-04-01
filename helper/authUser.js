@@ -5,6 +5,7 @@ const authenticate = (fn) => async (req, res) => {
   const cookie = parse(req.headers.cookie).auth;
   console.log(req.headers)
   console.log(req.body)
+  console.log(cookie)
   jwt.verify(
     cookie,
     process.env.jwtsecret,
