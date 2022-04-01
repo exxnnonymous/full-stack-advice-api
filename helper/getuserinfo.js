@@ -14,7 +14,7 @@ export default async function getuserinfo(ctx) {
       });
       return { ...initState , user: resp.data, authenticated:true };
     } catch (err) {
-      console.log(err)
+      // console.log(err)
       return {...initState, user: null, authenticated: false };
     }
   }
