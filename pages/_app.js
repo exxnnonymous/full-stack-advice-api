@@ -89,3 +89,10 @@ MyApp.getInitialProps = async (appContext) => {
     return {};
   }
 };
+
+
+
+export async function getServerSideProps() {
+  const data = "myData";
+  return { props: { data } };
+}

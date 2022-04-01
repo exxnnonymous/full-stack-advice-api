@@ -34,7 +34,3 @@ export default function Home() {
 
 
 
-export async function getServerSideProps() {
-  const data = "myData";
-  return { props: { data } };
-}
