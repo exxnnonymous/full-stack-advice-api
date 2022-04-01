@@ -1,4 +1,3 @@
-import authenticate from "../../helper/authUser";
 import connectDB from "../../helper/connection";
 import User from "../../models/user";
 import { parse } from "cookie";
@@ -25,4 +24,4 @@ async function getUserById(req, res) {
     }
 }
 
-export default connectDB(authenticate(getUserById));
+export default connectDB(getUserById);
