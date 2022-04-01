@@ -1,13 +1,14 @@
 import connectDB from "../../helper/connection";
 import User from "../../models/user";
 import jwt from "jsonwebtoken";
+import {parse} from "cookie"
 
 async function getUserById(req, res) {
   if(req.method !== "GET"){
     return res.status(400).json({message:'req_method_not_supported'})
   }
   if(req.cookies){
-    const cookie = req.cookies.auth;
+    const cookie = parse(req.headers.cookie).auth;
     
     if (cookie) {
       try {
