@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     mongodburl: process.env.MONGODB_URI,
     jwtsecret: process.env.JWTSECRET,
-    public_url: process.env.NEXT_PUBLIC_URL
+    public_url: 'https://advice-api-smoky.vercel.app/'
 }
 }
 
