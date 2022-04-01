@@ -1,8 +1,10 @@
 import jwt from "jsonwebtoken";
+import { parse } from "cookie";
 
 const authenticate = (fn) => async (req, res) => {
+  const cookie = parse(req.headers.cookie).auth;
   jwt.verify(
-    req.cookies.auth,
+    cookie,
     process.env.jwtsecret,
     async function (err, decoded) {
       if (!err && decoded) {
