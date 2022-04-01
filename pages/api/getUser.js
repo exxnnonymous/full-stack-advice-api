@@ -8,6 +8,7 @@ async function getUserById(req, res) {
   }
   if(req.cookies){
     const cookie = req.cookies.auth;
+    
     if (cookie) {
       try {
         const decoded = jwt.verify(cookie, process.env.jwtsecret);
