@@ -31,3 +31,10 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+export async function getServerSideProps() {
+  const data = "myData";
+  return { props: { data } };
+}

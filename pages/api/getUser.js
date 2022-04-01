@@ -3,10 +3,8 @@ import User from "../../models/user";
 import jwt from "jsonwebtoken";
 
 async function getUserById(req, res) {
-  console.log(req)
   if(req.cookies){
     const cookie = req.cookies.auth;
-    console.log(cookie)
     if (cookie) {
       try {
         const decoded = jwt.verify(cookie, process.env.jwtsecret);
