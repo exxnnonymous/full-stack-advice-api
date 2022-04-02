@@ -52,7 +52,7 @@ async function signup(req, res) {
           cookie.serialize("auth", jwt_user, {
             httpOnly: true,
             secure: process.env.NODE_ENV !== "development",
-            sameSite: "strict",
+            sameSite: "Lax",
             maxAge: 3600000 * 24 * 7,
             path: "/",
           })
