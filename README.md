@@ -35,7 +35,7 @@ Start the app
     npm start
 
 ### Links
-- Live Site URL: ()
+- Live Site URL: (https://advice-api-smoky.vercel.app/)
 
 ## My process
 
@@ -57,3 +57,4 @@ I learned a lot while building this website. I learned a react component library
 ## Author
 
 - Twitter - [@exxnnonymous](https://www.twitter.com/exxnnonymous)
+- LinkedIn - [Sulav Bista](https://www.linkedin.com/in/sulav-bista-9018521bb/)
