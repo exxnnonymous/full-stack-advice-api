@@ -12,7 +12,7 @@ import HeaderMiddle from "@/components/Layout/Header";
 import AuthProvider from "@/context/AuthContext";
 import ModalProvider from "@/context/ModalLoadingContext";
 import Notification from "@/components/Misc/Notification";
-import getuserinfo from "../helper/getuserinfo";
+import getuserinfo from "@/helper/getuserinfo";
 import LoadingComponent from "@/components/Misc/Loading";
 import { useRouter } from "next/router";
 import InitialLoading from "@/components/Misc/InitialLoading";

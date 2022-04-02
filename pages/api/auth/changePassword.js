@@ -1,16 +1,16 @@
-import connectDB from "../../../helper/connection";
+import connectDB from "@/helper/connection";
 import User from "../../../models/user";
 import bcrypt from "bcrypt";
 import dateDiff from "@/helper/getDateDiff";
 
 export default connectDB(async function changePassword(req, res) {
   if (req.method === "POST") {
-    const { oldPassword, newPassword, email } = req.body;
+    let { oldPassword, newPassword, email } = req.body;
     if (oldPassword && newPassword && email) {
       if (oldPassword === newPassword) {
         return res.status(400).json({ message: "Please choose new password!" });
       }
-
+      email = email.toLowerCase()
       let _user = await User.findOne({ email: email });
       if (!_user) {
         return res.status(401).json({ message: "Invalid Email!" });

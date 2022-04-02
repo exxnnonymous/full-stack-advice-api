@@ -1,5 +1,5 @@
-import authenticate from "../../../helper/authUser";
-import connectDB from "../../../helper/connection";
+import authenticate from "@/helper/authUser";
+import connectDB from "@/helper/connection";
 import User from "../../../models/user";
 import { parse } from "cookie";
 import jwt from "jsonwebtoken";
@@ -10,10 +10,13 @@ export default connectDB(
   authenticate(async function changeEmail(req, res) {
     try {
       if (req.method === "POST") {
-        const { newEmail, oldEmail, password } = req.body;
+        let { newEmail, oldEmail, password } = req.body;
 
         // checking whether the request body is empty
         if (newEmail && oldEmail && password) {
+          oldEmail = oldEmail.toLowerCase()
+          newEmail = newEmail.toLowerCase()
+
           // checking whether the new and old email is same
           if (newEmail === oldEmail) {
             return res.status(400).json({ message: "Enter a new email!" });
@@ -28,6 +31,12 @@ export default connectDB(
               }
 
               const _user = await User.findOne({ email: oldEmail });
+              const found_user = await User.findOne({ email: newEmail });
+              if(found_user){
+                return res
+                  .status(401)
+                  .json({ message: "Email has already been taken!" });
+              }
 
               if (!_user) {
                 return res

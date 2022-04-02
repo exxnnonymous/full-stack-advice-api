@@ -1,7 +1,7 @@
-import connectDB from "../../../helper/connection";
+import connectDB from "@/helper/connection";
 import User from "../../../models/user";
 import { v4 as uuidv4 } from "uuid";
-import authenticate from "helper/authUser";
+import authenticate from "@/helper/authUser";
 
 export default connectDB(authenticate(async function changeApiKey(req, res) {
   if (req.method === "POST") {

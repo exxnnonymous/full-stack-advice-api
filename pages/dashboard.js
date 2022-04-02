@@ -8,7 +8,7 @@ import DashboardLayout from "@/components/Dashboard/DashboardLayout";
 import GlobalStyle from "@/components/Dashboard/GlobalStyle";
 import NavbarSimple from "@/components/Dashboard/Navbar/Navbar";
 import { useModal } from "@/context/ModalLoadingContext";
-import getuserinfo from "../helper/getuserinfo";
+import getuserinfo from "@/helper/getuserinfo";
 import { useAuth } from "@/context/AuthContext";
 
 const useStyles = createStyles((theme)=>{

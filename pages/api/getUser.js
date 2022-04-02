@@ -1,4 +1,4 @@
-import connectDB from "../../helper/connection";
+import connectDB from "@/helper/connection";
 import User from "../../models/user";
 import jwt from "jsonwebtoken";
 import {parse} from "cookie"

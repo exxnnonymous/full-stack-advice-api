@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "../../../models/user";
-import connectDB from "../../../helper/connection";
+import connectDB from "@/helper/connection";
 import jwt from "jsonwebtoken";
 import cookie from "cookie";
 import { v4 as uuidv4 } from "uuid";
@@ -10,8 +10,9 @@ async function signup(req, res) {
     return res.status(422).json({ message: "req_method_not_supported" });
   }
 
-  const { name, password, email } = req.body;
+  let { name, password, email } = req.body;
   if (name && password && email) {
+    email = email.toLowerCase()
     const found_user = await User.findOne({ email: email });
 
     if (found_user) {
@@ -42,7 +43,7 @@ async function signup(req, res) {
         });
         let usercreated = await user.save();
         const jwt_user = jwt.sign(
-          { _id: usercreated._id },
+          { _id: usercreated._id,email: usercreated.email },
           process.env.jwtsecret,
           { expiresIn: "7d" }
         );

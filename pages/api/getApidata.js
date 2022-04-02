@@ -1,4 +1,3 @@
-import authenticate from "helper/authUser";
 import connectDB from "helper/connection";
 import User from "models/user";
 
@@ -111,4 +110,4 @@ async function getAPidata(req, res) {
     .json({ message: "Enter the correct API key", api: apikey });
 }
 
-export default connectDB(authenticate(getAPidata));
+export default connectDB(getAPidata);

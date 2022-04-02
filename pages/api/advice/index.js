@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import auth_api from "../../../helper/authAPI"
+import auth_api from "@/helper/authAPI"
 
 
 export default auth_api(async function handler(req, res) {

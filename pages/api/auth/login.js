@@ -1,13 +1,14 @@
 import bcrypt from "bcrypt";
 import User from "../../../models/user";
-import connectDB from "../../../helper/connection";
+import connectDB from "@/helper/connection";
 import jwt from "jsonwebtoken";
 import cookie from "cookie";
 
 async function signup(req, res) {
   if (req.method === "POST") {
-    const { password, email } = req.body;
+    let { password, email } = req.body;
     if (password && email) {
+      email = email.toLowerCase()
       let _user = await User.findOne({ email: email });
       if (!_user) {
         return res.status(401).json({ message: "Invalid email or password!" });
